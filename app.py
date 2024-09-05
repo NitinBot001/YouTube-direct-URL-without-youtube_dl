@@ -39,7 +39,7 @@ def get_m4a():
     # Iterate through the divs and extract href if the download attribute ends with '.m4a'
     for div in divs:
         link_tag = div.find('a', download=True)  # Ensure 'download' attribute is present
-        if link_tag and link_tag.get('download', '').endswith('.m4a'):
+        if link_tag and link_tag.get('download', '').endswith('.m4a' or '.mp4' or 'mp3'):
             href = link_tag.get('href')
             if href:
                 return jsonify({"m4a_url": href}), 200
