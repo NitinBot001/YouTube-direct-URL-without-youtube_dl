@@ -13,7 +13,7 @@ def get_m4a():
         return jsonify({"error": "No videoID provided"}), 400
     
     # Target URL
-    url = f"https://video.genyt.net/{ytvideo_id}"
+    url = f"https://cors-anywhere-ebrz.onrender.com/https://video.genyt.net/{ytvideo_id}"
     
     # Headers to simulate a real browser request
     headers = {
